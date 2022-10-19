@@ -20,7 +20,7 @@
     "@aws-sdk/client-cloudfront": "3.41.0",
     "@aws-sdk/client-cloudwatch": "3.41.0",
     "@aws-sdk/client-dynamodb": "3.40.0",
-    "@aws-sdk/client-ec2": "3.33.0",
+    "@aws-sdk/client-ec2": "^3.190.0",
     "@aws-sdk/client-elastic-load-balancing-v2": "3.38.0",
     "@aws-sdk/client-elasticache": "3.40.0",
     "@aws-sdk/client-iam": "3.38.0",
