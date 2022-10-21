@@ -10,7 +10,8 @@ const { sendAutoScalingCommand } = require('./helpers')
 const asgName = 'hamsterASG'
 const ltName = 'hamsterLT'
 const policyName = 'hamsterPolicy'
-const tgArn = '/* TODO: get target group ARN */'
+// Now use this tgArn from the output of the create-load-balancer.js:
+const tgArn = 'arn:aws:elasticloadbalancing:us-east-1:052318960080:targetgroup/hamsterTG/3e7dc0ccdc7455d3'
 
 async function execute () {
   try {
@@ -23,11 +24,40 @@ async function execute () {
 }
 
 function createAutoScalingGroup (asgName, ltName) {
-  // TODO: Create an auto scaling group
+  const params = {
+    AutoScalingGroupName: asgName,
+    AvailabilityZones: [
+      'us-east-1a',
+      'us-east-1b',
+    ],
+    LaunchTemplate: {
+      LaunchTemplateName: ltName,
+    },
+    MaxSize: 2,
+    MinSize: 1,
+    TargetGroupsARNs: [tgArn]
+  }
+
+  const command = new CreateAutoScalingGroupCommand(params)
+  return sendAutoScalingCommand(command)
 }
 
 function createASGPolicy (asgName, policyName) {
-  // TODO: Create an auto scaling group policy
+  const params = {
+    AdjustmentType: 'ChangeInCapacity',
+    AutoScalingGroupName: asgName,
+    PolicyName: policyName,
+    PolicyType: 'TargetTrackingScaling',
+    TargetTrackingConfiguration: { // what metric to use
+        TargetValue: 5, // I want to scale on a per vCPU util)
+        PredefinedMetricSpecification: {
+          PredefinedMetricType: 'ASGAverageCPUUtilization'
+        }
+    }
+  }
+
+  const command = new PutScalingPolicyCommand(params)
+  return sendAutoScalingCommand(command)
 }
 
 execute()
