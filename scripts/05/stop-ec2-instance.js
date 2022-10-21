@@ -8,7 +8,7 @@ const { sendCommand } = require('./helpers')
 // Declare local variables
 const sgName = 'hamster_sg'
 const keyName = 'hamster_key'
-const instanceId = '/* TODO: Add the instance Id to stop */'
+const instanceId = 'i-0dc6d9c0ff0bc6b39'
 
 async function execute () {
   try {
@@ -22,13 +22,13 @@ async function execute () {
 
 async function createInstance (sgName, keyName) {
   const params = {
-    ImageId: '/* TODO: Add ami id for amazon linux 2 */',
+    ImageId: 'ami-09d3b3274b6c5d4aa',
     InstanceType: 't2.micro',
     KeyName: keyName,
     MaxCount: 1,
     MinCount: 1,
     Placement: {
-      AvailabilityZone: '/* TODO: Add the az from the instance that is stopping */'
+      AvailabilityZone: 'us-east-1b'
     },
     SecurityGroups: [ sgName ]
   }
