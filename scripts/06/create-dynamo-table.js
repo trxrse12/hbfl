@@ -6,6 +6,7 @@ const { sendDynamoDBCommand } = require('./helpers')
 
 async function execute () {
   try {
+    // both tables below will use the same key schema
     await createTable('hamsters')
     const data = await createTable('races')
     console.log(data)
@@ -15,7 +16,28 @@ async function execute () {
 }
 
 async function createTable (tableName) {
-  // TODO: Create dynamodb table
+  const params = {
+    TableName: tableName,
+    AttributeDefinitions: [
+      {
+        AttributeName: 'id',
+        AttributeType: 'N',
+      },
+    ],
+    KeySchema: [
+      {
+        AttributeName: 'id', // has to match the AttributeDefinitions above
+        KeyType: 'HASH',
+      }
+    ],
+    ProvisionedThroughput: {
+      ReadCapacityUnits: 5,
+      WriteCapacityUnits: 5,
+    },
+  }
+
+  const command = new CreateTableCommand(params)
+  return sendDynamoDBCommand(command)
 }
 
 execute()
