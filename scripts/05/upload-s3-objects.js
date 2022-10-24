@@ -5,13 +5,14 @@ const {
 const helpers = require('./helpers')
 
 // Declare local variables
-const bucketName = '/* TODO: Bucket you created */'
+const bucketName = 'hamster-bucket-rse-2022'
 
 async function execute () {
   try {
     const files = await helpers.getPublicFiles()
 
     for (const file of files) {
+      console.log('MMMMMMMMMMMMMMMMMMM uploading file:', file.name)
       const response = await uploadS3Object(bucketName, file)
       console.log('Uploaded file with ETag:', response.ETag)
     }
@@ -23,7 +24,15 @@ async function execute () {
 }
 
 async function uploadS3Object (bucketName, file) {
-  // TODO: Put object in S3
+  const params = {
+    Bucket: bucketName,
+    ACL: 'public-read', // specific to the file I'm writing, not to the bucket
+    Body: file.contents,
+    Key: file.name,
+    ContentType: helpers.getContentType(file.name)
+  }
+  const command = new PutObjectCommand(params)
+  return helpers.sendS3Command(command)
 }
 
 execute()
