@@ -101,9 +101,9 @@ function upload (file, ip) {
 
     client.scp(file, {
       host: ip,
-      username: 'bitnami',
-      privateKey: require('fs').readFileSync(path.join(os.homedir(), '.ssh', 'hamster_key')),
-      path: '/home/bitnami/'
+      username: 'ec2-user',
+      privateKey: require('fs').readFileSync(path.join(os.homedir(), '.ssh', 'ctex_key')),
+      path: '/home/ctex/'
     },
     myClient,
     (err) => {
@@ -115,15 +115,17 @@ function upload (file, ip) {
 
 function unpack (ip) {
   return new Promise((resolve, reject) => {
-    const command = 'cd /home/bitnami && ' +
+    const command = 'cd /home/ctex && ' +
       'unzip -o -q ./archive.zip -d hbfl && ' +
-      'cd hbfl && ' +
+      'cd ~/hbfl && ' +
+      'nvm use 16 && ' +
       'npm ci && ' + // installs dependencies
-      'kill -9 $(pgrep -f node | grep -v ^$$\\$) && ' + // this kills any existing node processes except self
+      'kill -9 $(pgrep -f node | grep -v ^$$\\$) && ' + // this kills any existing node processes 
+          // except self
       'npm start' // starts app
 
     exec(command, {
-      user: 'bitnami',
+      user: 'ec2-user',
       host: ip,
       key: require('fs').readFileSync(path.join(os.homedir(), '.ssh', 'hamster_key'))
     }).pipe(process.stdout)

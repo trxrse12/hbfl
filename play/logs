@@ -1,0 +1,472 @@
+[    2.456745] Loaded X.509 cert 'Debian Secure Boot CA: 6ccece7e4c6c0d1f6149f3dd27dfcc5cbb419ea1'
+[    2.467664] Loaded X.509 cert 'Debian Secure Boot Signer 2022 - linux: 14011249c2675ea8e5148542202005810584b25f'
+[    2.478982] Key type ._fscrypt registered
+[    2.484529] Key type .fscrypt registered
+[    2.491394] Key type fscrypt-provisioning registered
+[    2.499669] AppArmor: AppArmor sha1 policy hashing enabled
+[    2.508040] xenbus_probe_frontend: Device with no driver: device/vbd/51712
+[    2.518516] xenbus_probe_frontend: Device with no driver: device/vif/0
+[    2.531150] Freeing unused kernel image (initmem) memory: 2444K
+[    2.540357] Write protecting the kernel read-only data: 22528k
+[    2.550155] Freeing unused kernel image (text/rodata gap) memory: 2036K
+[    2.560304] Freeing unused kernel image (rodata/data gap) memory: 1244K
+[    2.572205] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[    2.580419] x86/mm: Checking user space page tables
+[    2.586098] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[    2.592647] Run /init as init process
+Loading, please wait...
+Success: Disabled IPv6 DAD
+Starting version 247.3-7+deb11u1
+[    2.729552] Invalid max_queues (4), will use default max: 1.
+[    2.738915] xen_netfront: Initialising Xen virtual ethernet driver
+[    2.750436] SCSI subsystem initialized
+[    2.781748] scsi host0: ata_piix
+[    2.787453] scsi host1: ata_piix
+[    2.793268] ata1: PATA max MWDMA2 cmd 0x1f0 ctl 0x3f6 bmdma 0xc100 irq 14
+[    2.801414] ata2: PATA max MWDMA2 cmd 0x170 ctl 0x376 bmdma 0xc108 irq 15
+[    2.850905] blkfront: xvda: barrier or flush: disabled; persistent grants: disabled; indirect descriptors: enabled; bounce buffer: disabled;
+[    2.870009]  xvda: xvda1 xvda14 xvda15
+Begin: Loading essential drivers ... done.
+Begin: Running /scripts/init-premount ... done.
+Begin: Mounting root file system ... Begin: Running /scripts/local-top ... done.
+Begin: Running /scripts/local-premount ... done.
+Begin: Will now check root file system ... fsck from util-linux 2.36.1
+[/sbin/fsck.ext4 (1) -- /dev/xvda1] fsck.ext4 -a -C0 /dev/xvda1 
+/dev/xvda1: clean, 78889/647168 files, 709068/2588667 blocks
+done.
+[    3.173231] EXT4-fs (xvda1): mounted filesystem with ordered data mode. Opts: (null)
+done.
+Begin: Running /scripts/local-bottom ... GROWROOT: NOCHANGE: partition 1 is size 20709343. it cannot be grown
+done.
+Begin: Running /scripts/init-bottom ... done.
+[    3.259019] Not activating Mandatory Access Control as /sbin/tomoyo-init does not exist.
+[    3.960238] systemd[1]: Inserted module 'autofs4'
+[    3.984417] systemd[1]: systemd 247.3-7+deb11u1 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +ZSTD +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=unified)
+[    4.002488] systemd[1]: Detected virtualization xen.
+[    4.006520] systemd[1]: Detected architecture x86-64.
+
+Welcome to [1mDebian GNU/Linux 11 (bullseye)[0m!
+
+[    4.029990] systemd[1]: Set hostname to <ip-172-31-48-184>.
+[    4.379892] systemd[1]: /etc/systemd/system/bitnami.service:17: Support for option SysVStartPriority= has been removed and it is ignored
+[    4.420006] systemd[1]: Condition check resulted in System Slice being skipped.
+[    4.428956] systemd[1]: Queued start job for default target Graphical Interface.
+[    4.435945] systemd[1]: Created slice system-modprobe.slice.
+[[0;32m  OK  [0m] Created slice [0;1;39msystem-modprobe.slice[0m.
+[    4.444247] systemd[1]: Created slice system-systemd\x2dgrowfs.slice.
+[[0;32m  OK  [0m] Created slice [0;1;39msystem-systemd\x2dgrowfs.slice[0m.
+[    4.453809] systemd[1]: Created slice User and Session Slice.
+[[0;32m  OK  [0m] Created slice [0;1;39mUser and Session Slice[0m.
+[    4.462812] systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+[[0;32m  OK  [0m] Started [0;1;39mDispatch Password â¦ts to Console Directory Watch[0m.
+[    4.473420] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[[0;32m  OK  [0m] Started [0;1;39mForward Password Râ¦uests to Wall Directory Watch[0m.
+[    4.483756] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+[[0;32m  OK  [0m] Set up automount [0;1;39mArbitraryâ¦s File System Automount Point[0m.
+[    4.496265] systemd[1]: Reached target Local Encrypted Volumes.
+[[0;32m  OK  [0m] Reached target [0;1;39mLocal Encrypted Volumes[0m.
+[    4.505352] systemd[1]: Reached target Paths.
+[[0;32m  OK  [0m] Reached target [0;1;39mPaths[0m.
+[    4.511502] systemd[1]: Reached target Remote File Systems.
+[[0;32m  OK  [0m] Reached target [0;1;39mRemote File Systems[0m.
+[    4.518933] systemd[1]: Reached target Slices.
+[[0;32m  OK  [0m] Reached target [0;1;39mSlices[0m.
+[    4.525651] systemd[1]: Reached target Swap.
+[[0;32m  OK  [0m] Reached target [0;1;39mSwap[0m.
+[    4.532681] systemd[1]: Reached target System Time Set.
+[[0;32m  OK  [0m] Reached target [0;1;39mSystem Time Set[0m.
+[    4.542400] systemd[1]: Listening on Syslog Socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mSyslog Socket[0m.
+[    4.552634] systemd[1]: Listening on fsck to fsckd communication Socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mfsck to fsckd communication Socket[0m.
+[    4.564730] systemd[1]: Listening on initctl Compatibility Named Pipe.
+[[0;32m  OK  [0m] Listening on [0;1;39minitctl Compatibility Named Pipe[0m.
+[    4.578474] systemd[1]: Listening on Journal Audit Socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mJournal Audit Socket[0m.
+[    4.592890] systemd[1]: Listening on Journal Socket (/dev/log).
+[[0;32m  OK  [0m] Listening on [0;1;39mJournal Socket (/dev/log)[0m.
+[    4.607318] systemd[1]: Listening on Journal Socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mJournal Socket[0m.
+[    4.618523] systemd[1]: Listening on udev Control Socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mudev Control Socket[0m.
+[    4.629272] systemd[1]: Listening on udev Kernel Socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mudev Kernel Socket[0m.
+[    4.639430] systemd[1]: Mounting Huge Pages File System...
+         Mounting [0;1;39mHuge Pages File System[0m...
+[    4.651456] systemd[1]: Mounting POSIX Message Queue File System...
+         Mounting [0;1;39mPOSIX Message Queue File System[0m...
+[    4.663206] systemd[1]: Mounting Kernel Debug File System...
+         Mounting [0;1;39mKernel Debug File System[0m...
+[    4.676117] systemd[1]: Mounting Kernel Trace File System...
+         Mounting [0;1;39mKernel Trace File System[0m...
+[    4.690302] systemd[1]: Starting Create list of static device nodes for the current kernel...
+         Starting [0;1;39mCreate list of stâ¦odes for the current kernel[0m...
+[    4.709013] systemd[1]: Starting Load Kernel Module configfs...
+         Starting [0;1;39mLoad Kernel Module configfs[0m...
+[    4.722587] systemd[1]: Starting Load Kernel Module drm...
+         Starting [0;1;39mLoad Kernel Module drm[0m...
+[    4.737629] systemd[1]: Starting Load Kernel Module fuse...
+         Starting [0;1;39mLoad Kernel Module fuse[0m...
+[    4.750658] systemd[1]: Condition check resulted in Set Up Additional Binary Formats being skipped.
+[    4.764935] systemd[1]: Condition check resulted in File System Check on Root Device being skipped.
+[    4.776781] fuse: init (API version 7.32)
+[    4.783882] systemd[1]: Starting Journal Service...
+         Starting [0;1;39mJournal Service[0m...
+[    4.798696] systemd[1]: Starting Load Kernel Modules...
+         Starting [0;1;39mLoad Kernel Modules[0m...
+[    4.825748] systemd[1]: Starting Remount Root and Kernel File Systems...
+         Starting [0;1;39mRemount Root and Kernel File Systems[0m...
+[    4.847398] systemd[1]: Starting Coldplug All udev Devices...
+         Starting [0;1;39mColdplug All udev Devices[0m...
+[    4.863173] systemd[1]: Mounted Huge Pages File System.
+[[0;32m  OK  [0m] Mounted [0;1;39mHuge Pages File System[0m.
+[    4.872912] systemd[1]: Mounted POSIX Message Queue File System.
+[[0;32m  OK  [0m] Mounted [0;1;39mPOSIX Message Queue File System[0m.
+[    4.905781] systemd[1]: Mounted Kernel Debug File System.
+[[0;32m  OK  [0m] Mounted [0;1;39mKernel Debug File System[0m.
+[    4.926265] systemd[1]: Started Journal Service.
+[[0;32m  OK  [0m] Started [0;1;39mJournal Service[0m.
+[[0;32m  OK  [0m] Mounted [0;1;39mKernel Trace File System[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mCreate list of stâ¦ nodes for the current kernel[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mLoad Kernel Module configfs[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mLoad Kernel Module drm[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mLoad Kernel Module fuse[0m.
+         Mounting [0;1;39mFUSE Control File System[0m...
+         Mounting [0;1;39mKernel Configuration File System[0m...
+[    4.983911] EXT4-fs (xvda1): re-mounted. Opts: discard,errors=remount-ro
+[[0;32m  OK  [0m] Finished [0;1;39mLoad Kernel Modules[0m.
+[[0;32m  OK  [0m] Mounted [0;1;39mFUSE Control File System[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mRemount Root and Kernel File Systems[0m.
+[[0;32m  OK  [0m] Mounted [0;1;39mKernel Configuration File System[0m.
+         Starting [0;1;39mInitial cloud-init job (pre-networking)[0m...
+         Starting [0;1;39mGrow File System on /[0m...
+         Starting [0;1;39mFlush Journal to Persistent Storage[0m...
+[    5.056063] EXT4-fs (xvda1): resizing filesystem from 2588667 to 2588667 blocks
+         Starting [0;1;39mLoad/Save Random Seed[0m...
+         Starting [0;1;39mApply Kernel Variables[0m...
+         Starting [0;1;39mCreate System Users[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mColdplug All udev Devices[0m.
+         Starting [0;1;39mHelper to synchronize boot up for ifupdown[0m...[    5.116933] systemd-journald[194]: Received client request to flush runtime journal.
+
+[[0;32m  OK  [0m] Finished [0;1;39mGrow File System on /[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mApply Kernel Variables[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mLoad/Save Random Seed[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mCreate System Users[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mHelper to synchronize boot up for ifupdown[0m.
+         Starting [0;1;39mCreate Static Device Nodes in /dev[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mCreate Static Device Nodes in /dev[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mLocal File Systems (Pre)[0m.
+         Starting [0;1;39mRule-based Manageâ¦for Device Events and Files[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mFlush Journal to Persistent Storage[0m.
+[[0;32m  OK  [0m] Started [0;1;39mRule-based Manager for Device Events and Files[0m.
+[    5.335543] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input2
+[    5.392854] ACPI: Power Button [PWRF]
+[    5.399144] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input3
+[    5.438911] ACPI: Sleep Button [SLPF]
+[[0;32m  OK  [0m] Found device [0;1;39m/dev/disk/by-uuid/DFF0-D616[0m.[    5.559572] RAPL PMU: API unit is 2^-32 Joules, 0 fixed counters, 655360 ms ovfl timer
+
+         Mounting [0;1;39m/boot/efi[0m...
+[    5.582939] cryptd: max_cpu_qlen set to 1000
+[    5.607871] AVX2 version of gcm_enc/dec engaged.
+[    5.613421] AES CTR mode by8 optimization enabled
+[[0;32m  OK  [0m] Mounted [0;1;39m/boot/efi[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mLocal File Systems[0m.
+         Starting [0;1;39mLoad AppArmor profiles[0m...
+         Starting [0;1;39mCreate Volatile Files and Directories[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mCreate Volatile Files and Directories[0m.
+         Starting [0;1;39mUpdate UTMP about System Boot/Shutdown[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mUpdate UTMP about System Boot/Shutdown[0m.
+[[0;32m  OK  [0m] Found device [0;1;39m/sys/subsystem/net/devices/eth0[0m.
+[    5.819992] audit: type=1400 audit(1666809445.156:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="lsb_release" pid=304 comm="apparmor_parser"
+[    5.836470] audit: type=1400 audit(1666809445.172:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/man" pid=306 comm="apparmor_parser"
+[    5.852992] audit: type=1400 audit(1666809445.172:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="man_filter" pid=306 comm="apparmor_parser"
+[    5.868948] audit: type=1400 audit(1666809445.172:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="man_groff" pid=306 comm="apparmor_parser"
+[    5.888758] audit: type=1400 audit(1666809445.224:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/sbin/haveged" pid=307 comm="apparmor_parser"
+[    5.910444] audit: type=1400 audit(1666809445.248:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe" pid=308 comm="apparmor_parser"
+[    5.922471] audit: type=1400 audit(1666809445.248:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe//kmod" pid=308 comm="apparmor_parser"
+[    5.948990] audit: type=1400 audit(1666809445.288:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="tcpdump" pid=309 comm="apparmor_parser"
+[[0;32m  OK  [0m] Finished [0;1;39mLoad AppArmor profiles[0m.[    5.988529] audit: type=1400 audit(1666809445.316:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/sbin/chronyd" pid=310 comm="apparmor_parser"
+
+[[0;32m  OK  [0m] Started [0;1;39mEntropy Daemon based on the HAVEGE algorithm[0m.
+[    6.309327] cloud-init[315]: Cloud-init v. 20.4.1 running 'init-local' at Wed, 26 Oct 2022 18:37:25 +0000. Up 6.27 seconds.
+[[0;32m  OK  [0m] Finished [0;1;39mInitial cloud-init job (pre-networking)[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mNetwork (Pre)[0m.
+[[0;32m  OK  [0m] Started [0;1;39mifup for eth0[0m.
+         Starting [0;1;39mRaise network interfaces[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mRaise network interfaces[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mNetwork[0m.
+         Starting [0;1;39mInitial cloud-iniâ¦ (metadata service crawler)[0m...
+[    7.591757] cloud-init[463]: Cloud-init v. 20.4.1 running 'init' at Wed, 26 Oct 2022 18:37:27 +0000. Up 7.56 seconds.
+[    7.613514] cloud-init[463]: ci-info: +++++++++++++++++++++++++++++++++++++++Net device info+++++++++++++++++++++++++++++++++++++++
+[    7.630380] cloud-init[463]: ci-info: +--------+------+------------------------------+---------------+--------+-------------------+
+[    7.650173] cloud-init[463]: ci-info: | Device |  Up  |           Address            |      Mask     | Scope  |     Hw-Address    |
+[    7.662780] cloud-init[463]: ci-info: +--------+------+------------------------------+---------------+--------+-------------------+
+[    7.678183] cloud-init[463]: ci-info: |  eth0  | True |         172.31.54.61         | 255.255.240.0 | global | 12:0e:47:2f:89:b5 |
+[    7.694188] cloud-init[463]: ci-info: |  eth0  | True | fe80::100e:47ff:fe2f:89b5/64 |       .       |  link  | 12:0e:47:2f:89:b5 |
+[    7.707843] cloud-init[463]: ci-info: |   lo   | True |          127.0.0.1           |   255.0.0.0   |  host  |         .         |
+[    7.725585] cloud-init[463]: ci-info: |   lo   | True |           ::1/128            |       .       |  host  |         .         |
+[    7.738151] cloud-init[463]: ci-info: +--------+------+------------------------------+---------------+--------+-------------------+
+[    7.757559] cloud-init[463]: ci-info: +++++++++++++++++++++++++++++Route IPv4 info+++++++++++++++++++++++++++++
+[    7.769039] cloud-init[463]: ci-info: +-------+-------------+-------------+---------------+-----------+-------+
+[    7.776399] cloud-init[463]: ci-info: | Route | Destination |   Gateway   |    Genmask    | Interface | Flags |
+[    7.782979] cloud-init[463]: ci-info: +-------+-------------+-------------+---------------+-----------+-------+
+[    7.790362] cloud-init[463]: ci-info: |   0   |   0.0.0.0   | 172.31.48.1 |    0.0.0.0    |    eth0   |   UG  |
+[    7.797276] cloud-init[463]: ci-info: |   1   | 172.31.48.0 |   0.0.0.0   | 255.255.240.0 |    eth0   |   U   |
+[    7.804150] cloud-init[463]: ci-info: +-------+-------------+-------------+---------------+-----------+-------+
+[    7.813005] cloud-init[463]: ci-info: +++++++++++++++++++Route IPv6 info+++++++++++++++++++
+[    7.820697] cloud-init[463]: ci-info: +-------+-------------+---------+-----------+-------+
+[    7.829713] cloud-init[463]: ci-info: | Route | Destination | Gateway | Interface | Flags |
+[    7.837864] cloud-init[463]: ci-info: +-------+-------------+---------+-----------+-------+
+[    7.846487] cloud-init[463]: ci-info: |   1   |  fe80::/64  |    ::   |    eth0   |   U   |
+[    7.857598] cloud-init[463]: ci-info: |   3   |    local    |    ::   |    eth0   |   U   |
+[    7.866481] cloud-init[463]: ci-info: |   4   |  multicast  |    ::   |    eth0   |   U   |
+[    7.872685] cloud-init[463]: ci-info: +-------+-------------+---------+-----------+-------+
+[    9.138879] cloud-init[463]: Generating public/private rsa key pair.
+[    9.149573] cloud-init[463]: Your identification has been saved in /etc/ssh/ssh_host_rsa_key
+[    9.162249] cloud-init[463]: Your public key has been saved in /etc/ssh/ssh_host_rsa_key.pub
+[    9.174222] cloud-init[463]: The key fingerprint is:
+[    9.182254] cloud-init[463]: SHA256:n+PpsTMnr2qkeMEsEabg202Yddt2GHZ65t+0fr3HSPU root@ip-172-31-54-61
+[    9.198271] cloud-init[463]: The key's randomart image is:
+[    9.206190] cloud-init[463]: +---[RSA 3072]----+
+[    9.214428] cloud-init[463]: |                 |
+[    9.222743] cloud-init[463]: |.   o. . o .     |
+[[0;32m  OK  [0m] Finished [0;1;39mInitial cloud-iniâ¦ob (metadata service crawler)[0m.
+[    9.232991] cloud-init[463]: |.. o+.. + =      |
+[    9.237331] cloud-init[463]: | ..o.. . = +    .|
+[[0;32m  OK  [0m] Reached target [0;1;39mCloud-config availability[0m.
+[    9.245935] cloud-init[463]: |  o o+  S =    ..|
+[[0;32m  OK  [0m] Reached target [0;1;39mNetwork is Online[0m.
+[    9.255233] cloud-init[463]: | . ...+ .. o  ..E|
+[[0;32m  OK  [0m] Reached target [0;1;39mSystem Initialization[0m.
+[    9.265452] cloud-init[463]: |     o +  = ..ooo|
+[[0;32m  OK  [0m] Started [0;1;39mDaily Cleanup of Temporary Directories[0m.
+[    9.276297] cloud-init[463]: |    . o ..+=...o=|
+[    9.281029] cloud-init[463]: |     . ..o*B. .o+|
+[[0;32m  OK  [0m] Listening on [0;1;39mD-Bus System Message Bus Socket[0m.
+[    9.288956] cloud-init[463]: +----[SHA256]-----+
+[    9.293069] cloud-init[463]: Generating public/private dsa key pair.
+[[0;32m  OK  [0m] Listening on [0;1;39mUUID daemon activation socket[0m.
+[    9.301900] cloud-init[463]: Your identification has been saved in /etc/ssh/ssh_host_dsa_key
+[[0;32m  OK  [0m] Reached target [0;1;39mSockets[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mBasic System[0m.
+[    9.312484] cloud-init[463]: Your public key has been saved in /etc/ssh/ssh_host_dsa_key.pub
+[    9.322871] cloud-init[463]: The key fingerprint is:
+         Starting [0;1;39mDeferred execution scheduler[0m...
+[    9.330746] cloud-init[463]: SHA256:X5fKbt6fG26zUjJa13055Pu+OnIRcUzcR3x+eo00ApI root@ip-172-31-54-61
+         Starting [0;1;39mLSB: bitnami init script[0m...
+[    9.339767] cloud-init[463]: The key's randomart image is:
+         Starting [0;1;39mchrony, an NTP client/server[0m...
+[    9.348303] cloud-init[463]: +---[DSA 1024]----+
+         Starting [0;1;39mApply the settings specified in cloud-config[0m...
+[    9.365556] cloud-init[463]: |         .    ++o|
+[    9.368390] cloud-init[463]: |        E .  . +=|
+[[0;32m  OK  [0m] Started [0;1;39mRegular background program processing daemon[0m.
+[    9.386227] cloud-init[463]: |         . .  o.o|
+[[0;32m  OK  [0m] Started [0;1;39mD-Bus System Message Bus[0m.
+[    9.397592] cloud-init[463]: |            ..ooo|
+[    9.405173] cloud-init[463]: |        S   .o*+*|
+[    9.419714] cloud-init[463]: |         . o Bo**|
+         Starting [0;1;39mRemove Stale Onliâ¦t4 Metadata Check Snapshots[0m...
+[    9.436156] cloud-init[463]: |          . = *o+|
+         Starting [0;1;39mSystem Logging Service[0m...
+[    9.449855] cloud-init[463]: |           +.=.+o|
+         Starting [0;1;39mOpenBSD Secure Shell server[0m...
+[    9.461158] cloud-init[463]: |           o=.*OX|
+[    9.474178] cloud-init[463]: +----[SHA256]-----+
+         Starting [0;1;39mUser Login Management[0m...
+[    9.493556] cloud-init[463]: Generating public/private ecdsa key pair.
+         Starting [0;1;39mPermit User Sessions[0m...
+[    9.509742] cloud-init[463]: Your identification has been saved in /etc/ssh/ssh_host_ecdsa_key
+[[0;32m  OK  [0m] Started [0;1;39mDeferred execution scheduler[0m.
+[    9.540543] cloud-init[463]: Your public key has been saved in /etc/ssh/ssh_host_ecdsa_key.pub
+[[0;32m  OK  [0m] Finished [0;1;39mPermit User Sessions[0m.
+[    9.571132] cloud-init[463]: The key fingerprint is:
+[    9.591806] cloud-init[463]: SHA256:VnmWyIVx68mSkxxAgSCIM+dNkKB7FriSQ9Uw48Fojfg root@ip-172-31-54-61
+[[0;32m  OK  [0m] Started [0;1;39mchrony, an NTP client/server[0m.
+[[0;32m  OK  [0m] Started [0;1;39mSystem Logging Service[0m.
+[    9.626359] cloud-init[463]: The key's randomart image is:
+[[0;32m  OK  [0m] Reached target [0;1;39mSystem Time Synchronized[0m.
+[    9.662666] cloud-init[463]: +---[ECDSA 256]---+
+[[0;32m  OK  [0m] Started [0;1;39mDaily apt download activities[0m.
+[    9.690929] cloud-init[463]: |+oBO+. o+..oo    |
+[[0;32m  OK  [0m] Started [0;1;39mDaily apt upgrade and clean activities[0m.
+[    9.712425] cloud-init[463]: |B==+=..  o.= o   |
+[[0;32m  OK  [0m] Started [0;1;39mPeriodic ext4 Onliâ¦ata Check for All Filesystems[0m.
+[    9.728175] cloud-init[463]: |+B.+      * =    |
+[[0;32m  OK  [0m] Started [0;1;39mDiscard unused blocks once a week[0m.
+[    9.746550] cloud-init[463]: |.+E..    o O .   |
+[[0;32m  OK  [0m] Started [0;1;39mDaily rotation of log files[0m.
+[    9.769705] cloud-init[463]: |* o     S * +    |
+[[0;32m  OK  [0m] Started [0;1;39mDaily man-db regeneration[0m.
+[    9.790423] cloud-init[463]: |.+     .   o     |
+[[0;32m  OK  [0m] Reached target [0;1;39mTimers[0m.
+[    9.805770] cloud-init[463]: |                 |
+[    9.817458] cloud-init[463]: |                 |
+[[0;32m  OK  [0m] Started [0;1;39mUser Login Management[0m.
+[    9.837452] cloud-init[463]: |                 |
+[    9.849914] cloud-init[463]: +----[SHA256]-----+
+         Starting [0;1;39mOnline ext4 Metadâ¦a Check for All Filesystems[0m...
+[    9.865643] cloud-init[463]: Generating public/private ed25519 key pair.
+[[0;32m  OK  [0m] Started [0;1;39mUnattended Upgrades Shutdown[0m.
+[    9.887101] cloud-init[463]: Your identification has been saved in /etc/ssh/ssh_host_ed25519_key
+         Starting [0;1;39mRotate log files[0m...
+[    9.928611] cloud-init[463]: Your public key has been saved in /etc/ssh/ssh_host_ed25519_key.pub
+         Starting [0;1;39mDaily man-db regeneration[0m...
+[    9.962897] cloud-init[463]: The key fingerprint is:
+[[0;32m  OK  [0m] Finished [0;1;39mOnline ext4 Metadata Check for All Filesystems[0m.
+[    9.984711] cloud-init[463]: SHA256:DvCwfVfrKZwQfRlu5PG3BMcSqTbac2kmmf4vIGayPXY root@ip-172-31-54-61
+[   10.018264] cloud-init[463]: The key's randomart image is:
+[   10.038195] cloud-init[463]: +--[ED25519 256]--+
+[   10.054263] cloud-init[463]: |            +o+. |
+[   10.070368] cloud-init[463]: |         . + Bo. |
+[   10.088457] cloud-init[463]: |    o   . . O o..|
+[   10.106505] cloud-init[463]: |     *   . B ....|
+[   10.122355] cloud-init[463]: |    . + S = = .. |
+[   10.137697] cloud-init[463]: |       = O X *   |
+[   10.149750] cloud-init[463]: |        B * X    |
+[   10.161739] cloud-init[463]: |       . + E .   |
+[   10.170713] cloud-init[463]: |        . o ..o. |
+[   10.191516] cloud-init[463]: +----[SHA256]-----+
+[   10.203740] bitnami[514]: ## 2022-10-26 18:37:29+00:00 ## INFO ## Running /opt/bitnami/var/init/pre-start/010_hostname...
+[   10.230400] bitnami[514]: ## 2022-10-26 18:37:29+00:00 ## INFO ## Running /opt/bitnami/var/init/pre-start/020_swap_file...
+[[0;32m  OK  [0m] Started [0;1;39mOpenBSD Secure Shell server[0m.
+[   10.567741] cloud-init[552]: Cloud-init v. 20.4.1 running 'modules:config' at Wed, 26 Oct 2022 18:37:30 +0000. Up 10.43 seconds.
+[   11.057881] device-mapper: uevent: version 1.0.3
+[   11.077333] device-mapper: ioctl: 4.43.0-ioctl (2020-10-01) initialised: dm-devel@redhat.com
+[[0;32m  OK  [0m] Finished [0;1;39mRemove Stale Onliâ¦ext4 Metadata Check Snapshots[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mRotate log files[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mApply the settings specified in cloud-config[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mDaily man-db regeneration[0m.
+[   17.754306] bitnami[514]: 650000+0 records in
+[   17.758943] bitnami[514]: 650000+0 records out
+[   17.764148] bitnami[514]: 665600000 bytes (666 MB, 635 MiB) copied, 8.01867 s, 83.0 MB/s
+[   20.247556] bitnami[514]: Setting up swapspace version 1, size = 634.8 MiB (665595904 bytes)
+[   20.255809] bitnami[514]: no label, UUID=69b948a9-7dd1-4b88-aff8-7aab97f1f375[   20.354578] Adding 649996k swap on /mnt/.bitnami.swap.  Priority:-2 extents:3 across:699148k SSFS
+
+[   20.277859] bitnami[514]: ## 2022-10-26 18:37:39+00:00 ## INFO ## Running /opt/bitnami/var/init/pre-start/030_check_if_demo_machine...
+[   20.604726] bitnami[514]: ## 2022-10-26 18:37:40+00:00 ## INFO ## Running /opt/bitnami/var/init/pre-start/040_change_boot_log_permissions...
+[   20.617790] bitnami[514]: ## 2022-10-26 18:37:40+00:00 ## INFO ## Running /opt/bitnami/var/init/pre-start/050_get_default_passwords...
+[   20.852559] bitnami[500]: ## 2022-10-26 18:37:40+00:00 ## INFO ## Starting services...
+[   24.539226] bitnami[983]: 2022-10-26T18:37:44.132Z - info: Saving configuration info to disk
+[   25.235546] bitnami[983]: 2022-10-26T18:37:44.829Z - info: Performing service start operation for redis
+[   30.549230] bitnami[983]: [38;5;6mredis [38;5;5m18:37:50.14 [0m[38;5;2mINFO [0m ==> redis started
+[   30.561454] bitnami[983]: 2022-10-26T18:37:50.142Z - info: Performing service start operation for apache
+[   36.569794] bitnami[983]: [38;5;6mapache [38;5;5m18:37:56.16 [0m[38;5;2mINFO [0m ==> apache started
+[   36.618272] bitnami[983]: 2022-10-26T18:37:56.212Z - info: Data disk not present
+[   36.636571] bitnami[983]: 2022-10-26T18:37:56.230Z - info: Starting gonit monitoring service
+[   39.480487] bitnami[983]: 2022-10-26T18:37:59.072Z - info: Start monitoring all services from gonit
+[   39.509321] bitnami[1318]: ## 2022-10-26 18:37:59+00:00 ## INFO ## Running /opt/bitnami/var/init/post-start/010_bitnami_agent_extra...
+[   39.594498] bitnami[1318]: ## 2022-10-26 18:37:59+00:00 ## INFO ## Running /opt/bitnami/var/init/post-start/020_bitnami_agent...
+[[0;32m  OK  [0m] Created slice [0;1;39mUser Slice of UID 1000[0m.
+         Starting [0;1;39mUser Runtime Directory /run/user/1000[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mUser Runtime Directory /run/user/1000[0m.
+         Starting [0;1;39mUser Manager for UID 1000[0m...
+[[0;32m  OK  [0m] Started [0;1;39mUser Manager for UID 1000[0m.
+[[0;32m  OK  [0m] Started [0;1;39mSession c1 of user bitnami[0m.
+[   40.417281] bitnami[1318]: ## 2022-10-26 18:38:00+00:00 ## INFO ## Running /opt/bitnami/var/init/post-start/030_update_welcome_file...
+[   40.465644] bitnami[1318]: ## 2022-10-26 18:38:00+00:00 ## INFO ## Running /opt/bitnami/var/init/post-start/040_bitnami_credentials_file...
+[   40.494746] bitnami[1318]: ## 2022-10-26 18:38:00+00:00 ## INFO ## Running /opt/bitnami/var/init/post-start/050_clean_metadata...
+[[0;32m  OK  [0m] Started [0;1;39mLSB: bitnami init script[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mMulti-User System[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mGraphical Interface[0m.
+         Starting [0;1;39mExecute cloud user/final scripts[0m...
+         Starting [0;1;39mUpdate UTMP about System Runlevel Changes[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mUpdate UTMP about System Runlevel Changes[0m.
+[   41.114629] cloud-init[1477]: Cloud-init v. 20.4.1 running 'modules:final' at Wed, 26 Oct 2022 18:38:00 +0000. Up 41.00 seconds.
+[   41.565130] cloud-init[1477]: Get:1 http://security.debian.org/debian-security bullseye-security InRelease [48.4 kB]
+[   41.671515] cloud-init[1477]: Hit:2 http://cdn-aws.deb.debian.org/debian bullseye InRelease
+[   41.681737] cloud-init[1477]: Get:3 http://cdn-aws.deb.debian.org/debian bullseye-updates InRelease [44.1 kB]
+[   41.690412] cloud-init[1477]: Get:4 http://cdn-aws.deb.debian.org/debian bullseye-backports InRelease [49.0 kB]
+[   41.891774] cloud-init[1477]: Get:5 http://security.debian.org/debian-security bullseye-security/main Sources [167 kB]
+[   41.921635] cloud-init[1477]: Get:6 http://security.debian.org/debian-security bullseye-security/main amd64 Packages [193 kB]
+[   41.953669] cloud-init[1477]: Get:7 http://security.debian.org/debian-security bullseye-security/main Translation-en [122 kB]
+[   42.197497] cloud-init[1477]: Get:8 http://cdn-aws.deb.debian.org/debian bullseye-updates/main Sources.diff/Index [14.0 kB]
+[   42.212866] cloud-init[1477]: Get:9 http://cdn-aws.deb.debian.org/debian bullseye-updates/main amd64 Packages.diff/Index [14.0 kB]
+[   42.232248] cloud-init[1477]: Get:10 http://cdn-aws.deb.debian.org/debian bullseye-updates/main Translation-en.diff/Index [6,117 B]
+[   42.261303] cloud-init[1477]: Get:11 http://cdn-aws.deb.debian.org/debian bullseye-updates/main Sources T-2022-10-21-2017.32-F-2022-10-21-2017.32.pdiff [1,848 B]
+[   42.295286] cloud-init[1477]: Get:12 http://cdn-aws.deb.debian.org/debian bullseye-updates/main amd64 Packages T-2022-10-21-2017.32-F-2022-10-21-2017.32.pdiff [9,785 B]
+[   42.311627] cloud-init[1477]: Get:11 http://cdn-aws.deb.debian.org/debian bullseye-updates/main Sources T-2022-10-21-2017.32-F-2022-10-21-2017.32.pdiff [1,848 B]
+[   42.332590] cloud-init[1477]: Get:13 http://cdn-aws.deb.debian.org/debian bullseye-updates/main Translation-en T-2022-10-21-2017.32-F-2022-10-21-2017.32.pdiff [2,494 B]
+[   42.351080] cloud-init[1477]: Get:13 http://cdn-aws.deb.debian.org/debian bullseye-updates/main Translation-en T-2022-10-21-2017.32-F-2022-10-21-2017.32.pdiff [2,494 B]
+[   42.370566] cloud-init[1477]: Get:12 http://cdn-aws.deb.debian.org/debian bullseye-updates/main amd64 Packages T-2022-10-21-2017.32-F-2022-10-21-2017.32.pdiff [9,785 B]
+[   42.426236] cloud-init[1477]: Get:14 http://cdn-aws.deb.debian.org/debian bullseye-backports/main Sources.diff/Index [63.3 kB]
+[   42.625085] cloud-init[1477]: Get:15 http://cdn-aws.deb.debian.org/debian bullseye-backports/main amd64 Packages.diff/Index [63.3 kB]
+[   42.792661] cloud-init[1477]: Get:16 http://cdn-aws.deb.debian.org/debian bullseye-backports/main Translation-en.diff/Index [63.3 kB]
+[   43.270119] cloud-init[1477]: Get:17 http://cdn-aws.deb.debian.org/debian bullseye-backports/main Sources T-2022-10-26-0210.09-F-2022-10-19-2015.34.pdiff [27.6 kB]
+[   43.298472] cloud-init[1477]: Get:17 http://cdn-aws.deb.debian.org/debian bullseye-backports/main Sources T-2022-10-26-0210.09-F-2022-10-19-2015.34.pdiff [27.6 kB]
+[   43.469215] cloud-init[1477]: Get:18 http://cdn-aws.deb.debian.org/debian bullseye-backports/main amd64 Packages T-2022-10-26-0210.09-F-2022-10-19-2015.34.pdiff [15.6 kB]
+[   43.507865] cloud-init[1477]: Get:19 http://cdn-aws.deb.debian.org/debian bullseye-backports/main Translation-en T-2022-10-25-2013.15-F-2022-10-24-1405.29.pdiff [5,845 B]
+[   43.542332] cloud-init[1477]: Get:18 http://cdn-aws.deb.debian.org/debian bullseye-backports/main amd64 Packages T-2022-10-26-0210.09-F-2022-10-19-2015.34.pdiff [15.6 kB]
+[   43.582493] cloud-init[1477]: Get:19 http://cdn-aws.deb.debian.org/debian bullseye-backports/main Translation-en T-2022-10-25-2013.15-F-2022-10-24-1405.29.pdiff [5,845 B]
+[   43.657193] cloud-init[1477]: Fetched 910 kB in 2s (432 kB/s)
+         Stopping [0;1;39mUser Manager for UID 1000[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mUser Manager for UID 1000[0m.
+         Stopping [0;1;39mUser Runtime Directory /run/user/1000[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mUser Runtime Directory /run/user/1000[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39mUser Slice of UID 1000[0m.
+[   52.281099] cloud-init[1477]: Reading package lists...
+[   52.379347] cloud-init[1477]: Reading package lists...
+[   52.538686] cloud-init[1477]: Building dependency tree...
+[   52.549770] cloud-init[1477]: Reading state information...
+[   52.714021] cloud-init[1477]: git is already the newest version (1:2.30.2-1).
+[   52.724260] cloud-init[1477]: 0 upgraded, 0 newly installed, 0 to remove and 9 not upgraded.
+[   54.875977] cloud-init[1477]: Cloning into '/home/bitnami/hbfl'...
+[  148.631270] cloud-init[1477]: <--- Last few GCs --->
+[  148.668646] cloud-init[1477]: [1814:0x5682700]    85194 ms: Mark-sweep 477.1 (497.2) -> 474.5 (498.7) MB, 1132.3 / 0.0 ms  (average mu = 0.624, current mu = 0.213) allocation failure; scavenge might not succeed
+[  148.680274] cloud-init[1477]: [1814:0x5682700]    86612 ms: Mark-sweep 478.6 (498.7) -> 476.2 (500.2) MB, 1295.0 / 0.0 ms  (average mu = 0.397, current mu = 0.087) allocation failure; scavenge might not succeed
+[  148.692815] cloud-init[1477]: <--- JS stacktrace --->
+[  148.697763] cloud-init[1477]: FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory
+[  149.122074] cloud-init[1477]:  1: 0xb6e4e0 node::Abort() [npm ci]
+[  149.139576] cloud-init[1477]:  2: 0xa7e632  [npm ci]
+[  149.147246] cloud-init[1477]:  3: 0xd47d90 v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [npm ci]
+[  149.155594] cloud-init[1477]:  4: 0xd48137 v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [npm ci]
+[  149.163968] cloud-init[1477]:  5: 0xf254f5  [npm ci]
+[  149.171129] cloud-init[1477]:  6: 0xf379dd v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [npm ci]
+[  149.179778] cloud-init[1477]:  7: 0xf120de v8::internal::HeapAllocator::AllocateRawWithLightRetrySlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [npm ci]
+[  149.195373] cloud-init[1477]:  8: 0xf134a7 v8::internal::HeapAllocator::AllocateRawWithRetryOrFailSlo0x16e9879wPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [npm ci]
+[  149.218534] cloud-init[1477]:  9: 0xef39f0 v8::internal::Factory::AllocateRaw(int, v8::internal::AllocationType, v8::internal::AllocationAlignment) [npm ci]
+[  149.240339] cloud-init[1477]: 10: 0xeeb464 v8::internal::FactoryBase<v8::internal::Factory>::AllocateRawWithImmortalMap(int, v8::internal::AllocationType, v8::internal::Map, v8::internal::AllocationAlignment) [npm ci]
+[  149.269273] cloud-init[1477]: 11: 0xeed7f8 v8::internal::FactoryBase<v8::internal::Factory>::NewRawTwoByteString(int, v8::internal::AllocationType) [npm ci]
+[  149.284132] cloud-init[1477]: 12: 0xef1445 v8::internal::FactoryBase<v8::internal::Factory>::NewConsString(v8::internal::Handle<v8::internal::String>, v8::internal::Handle<v8::internal::String>, v8::internal::AllocationType) [npm ci]
+[  149.294395] cloud-init[1477]: 13: 0x12d7d7a v8::internal::Runtime_StringAdd(int, unsigned long*, v8::internal::Isolate*) [npm ci]
+[  149.300765] cloud-init[1477]: 14: 0x16e9879  [npm ci]
+[  149.449774] cloud-init[1477]: /var/lib/cloud/instance/scripts/part-001: line 8:  1813 Aborted                 sudo npm ci
+[  151.990885] cloud-init[1477]: > hbfl@3.0.0 prestart
+[  151.996300] cloud-init[1477]: > npm run build
+[  152.576334] cloud-init[1477]: npm WARN logfile Error: EACCES: permission denied, scandir '/root/.npm/_logs'
+[  152.586321] cloud-init[1477]: npm WARN logfile  error cleaning log files [Error: EACCES: permission denied, scandir '/root/.npm/_logs'] {
+[  152.613641] cloud-init[1477]: npm WARN logfile   errno: -13,
+[  152.623252] cloud-init[1477]: npm WARN logfile   code: 'EACCES',
+[  152.657594] cloud-init[1477]: npm WARN logfile   syscall: 'scandir',
+[  152.666135] cloud-init[1477]: npm WARN logfile   path: '/root/.npm/_logs'
+[  152.674153] cloud-init[1477]: npm WARN logfile }
+[  152.711621] cloud-init[1477]: > hbfl@3.0.0 build
+[  152.719048] cloud-init[1477]: > webpack
+[  152.725909] cloud-init[1477]: sh: 1: webpack: not found
+[  153.550021] cloud-init[1477]: 2022-10-26 18:39:53,127 - cc_scripts_user.py[WARNING]: Failed to run module scripts-user (scripts in /var/lib/cloud/instance/scripts)
+[  153.789333] cloud-init[1477]: 2022-10-26 18:39:53,368 - util.py[WARNING]: Running module scripts-user (<module 'cloudinit.config.cc_scripts_user' from '/usr/lib/python3/dist-packages/cloudinit/config/cc_scripts_user.py'>) failed
+ci-info: +++++++++++++++++++++++++++++++Authorized keys from /home/bitnami/.ssh/authorized_keys for user bitnami+++++++++++++++++++++++++++++++
+ci-info: +---------+-------------------------------------------------------------------------------------------------+---------+--------------+
+ci-info: | Keytype |                                       Fingerprint (sha256)                                      | Options |   Comment    |
+ci-info: +---------+-------------------------------------------------------------------------------------------------+---------+--------------+
+ci-info: | ssh-rsa | f0:0d:df:b5:91:7d:5f:90:cd:98:1f:98:8b:c4:91:e2:6e:6b:64:5d:ba:e8:34:91:c2:b2:64:4e:e5:15:17:15 |    -    | hamster_key2 |
+ci-info: | ssh-rsa | 28:99:d1:87:d8:c6:ed:98:c9:1f:33:02:58:0b:3d:a2:d4:6d:2d:fd:e5:49:e5:56:69:51:46:ac:58:21:06:83 |    -    | hamster_key  |
+ci-info: +---------+-------------------------------------------------------------------------------------------------+---------+--------------+
+<14>Oct 26 18:39:54 ec2: 
+<14>Oct 26 18:39:54 ec2: #############################################################
+<14>Oct 26 18:39:54 ec2: -----BEGIN SSH HOST KEY FINGERPRINTS-----
+<14>Oct 26 18:39:54 ec2: 1024 SHA256:X5fKbt6fG26zUjJa13055Pu+OnIRcUzcR3x+eo00ApI root@ip-172-31-54-61 (DSA)
+<14>Oct 26 18:39:54 ec2: 256 SHA256:VnmWyIVx68mSkxxAgSCIM+dNkKB7FriSQ9Uw48Fojfg root@ip-172-31-54-61 (ECDSA)
+<14>Oct 26 18:39:54 ec2: 256 SHA256:DvCwfVfrKZwQfRlu5PG3BMcSqTbac2kmmf4vIGayPXY root@ip-172-31-54-61 (ED25519)
+<14>Oct 26 18:39:54 ec2: 3072 SHA256:n+PpsTMnr2qkeMEsEabg202Yddt2GHZ65t+0fr3HSPU root@ip-172-31-54-61 (RSA)
+<14>Oct 26 18:39:54 ec2: -----END SSH HOST KEY FINGERPRINTS-----
+<14>Oct 26 18:39:54 ec2: #############################################################
+-----BEGIN SSH HOST KEY KEYS-----
+ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBB6vhUeY/n6snPR9oYFZezDCJ2DLvOIZd9EClSPUEYzzfeMIlzn5JBf8F7pi5Q2Zgrj5BgN2yi1SkFrJ14Vv02w= root@ip-172-31-54-61
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIB1qC1NiAn1pzFuS/junYYtNxXvL3IrFtblbmA22dunZ root@ip-172-31-54-61
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCu9N6PsJYpdjtEKF/EdejazTsJbjXtJnOAk3rQl0ag3BPc+fMPVpqPj75Qb0z6GQKnRAS/9azrCBgnTdMLXJBofgfZHno2SZPsPwFjg5QJIAQqWvA36mJZoKDLxsyddQlW5G4IwL5cHQyaPu2PZV8vHxSKT47t3+BtOeZyX0cmeJwQRS0rk5sYghvMtZkAFMC4DpeJNYr8s5tTIKZOmBQrDheA81pngWFHc4eIK3r1GviGjhDHgI3vStDN4bMhVSgfJiQxNTb40InttLjXVwlXFZKdS39NnzXG9Oq75BLW9yLBUsZotvVOoCg7AJtWnocpBVhYSlvIcLDc1fwD9caGLrKYkIyF349ZXgGuvAkLc5SG8uyztDYauCVrEC9F6k+iOutBwAVdUYLm8e4TfMGkMOAxLflsCVHV4vko+uvQUqpQkvg7zwqH2DFKtWsNSEZyCL3Yo8Abz2XWxME7yXLQtrumhFXBlLaAaDUJDhecOiOcWegobBkM5MKlGF6AzCs= root@ip-172-31-54-61
+-----END SSH HOST KEY KEYS-----
+[  155.423392] cloud-init[1477]: Cloud-init v. 20.4.1 finished at Wed, 26 Oct 2022 18:39:54 +0000. Datasource DataSourceEc2Local.  Up 154.80 seconds
+[[0;1;31mFAILED[0m] Failed to start [0;1;39mExecute cloud user/final scripts[0m.
+See 'systemctl status cloud-final.service' for details.
+[[0;32m  OK  [0m] Reached target [0;1;39mCloud-init target[0m.

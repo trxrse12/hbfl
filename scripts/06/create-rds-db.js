@@ -21,7 +21,18 @@ async function execute () {
 }
 
 async function createDatabase (dbName, sgId) {
-  // TODO: Create the db instance
+  const params = {
+    AllocatedStorage: 5,
+    DBInstanceClass: 'db.t2.micro',
+    DBInstanceIdentifier: dbName,
+    Engine: 'mysql',
+    DBName: dbName,
+    VpcSecurityGroupsIds: [ sgId ],
+    MasterUsername: 'admin',
+    MasterUserPassword: 'mypassword',
+  }
+  const command = new CreateDBInstanceCommand(params)
+  return sendRDSCommand(command)
 }
 
 execute()

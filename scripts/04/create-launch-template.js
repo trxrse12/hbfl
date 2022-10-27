@@ -26,17 +26,16 @@ async function createLaunchTemplate (ltName, profileArn) {
     LaunchTemplateName: ltName,
     LaunchTemplateData: {
       IamInstanceProfile: {
-        Arn: profileArn
+        Arn: profileArn,
       },
-      ImageId: 'ami-0d5a25e8414d6d05a',
-      InstanceType: 't2.micro',
+      ImageId: "ami-09cbff4660aff2427",
+      InstanceType: "t2.micro",
       keyName: keyName,
-      SecurityGroups: [
-        sgName,
-      ],
-      UserData: 'IyEvYmluL2Jhc2gKc3VkbyBhcHQtZ2V0IHVwZGF0ZQpzdWRvIGFwdC1nZXQgLXkgaW5zdGFsbCBnaXQKcm0gLXJmIC9ob21lL2JpdG5hbWkvaGJmbApnaXQgY2xvbmUgaHR0cHM6Ly9naXRodWIuY29tL3J5YW5tdXJha2FtaS9oYmZsLmdpdCAvaG9tZS9iaXRuYW1pL2hiZmwKY2hvd24gLVIgYml0bmFtaTogL2hvbWUvYml0bmFtaS9oYmZsCmNkIC9ob21lL2JpdG5hbWkvaGJmbApzdWRvIG5wbSBjaQpzdWRvIG5wbSBydW4gc3RhcnQ='
-    }
-  }
+      SecurityGroups: [sgName],
+      UserData:
+        "IyEvYmluL2Jhc2gKc3VkbyBhcHQtZ2V0IHVwZGF0ZQpzdWRvIGFwdC1nZXQgLXkgaW5zdGFsbCBnaXQKcm0gLXJmIC9ob21lL2JpdG5hbWkvaGJmbApnaXQgY2xvbmUgaHR0cHM6Ly9naXRodWIuY29tL3J5YW5tdXJha2FtaS9oYmZsLmdpdCAvaG9tZS9iaXRuYW1pL2hiZmwKY2hvd24gLVIgYml0bmFtaTogL2hvbWUvYml0bmFtaS9oYmZsCmNkIC9ob21lL2JpdG5hbWkvaGJmbApzdWRvIG5wbSBjaQpzdWRvIG5wbSBydW4gc3RhcnQ=",
+    },
+  };
 
   const command = new CreateLaunchTemplateCommand(params)
   return helpers.sendCommand(command)

@@ -18,7 +18,17 @@ async function execute () {
 }
 
 async function createRedisCluster (clusterName, sgId) {
-  // TODO: Create redis cache cluster
+  const params = {
+    CacheClusterId: clusterName,
+    CacheNodeType: 'cache.t2.micro',
+    Engine: 'redis',
+    NumCacheNodes: 1, // this is the accepted one for Redis
+    SecurityGroupsIds: [
+      sgId
+    ]
+  }
+  const command = new CreateCacheClusterCommand(params)
+  return sendElastiCacheCommand(command)
 }
 
 execute()

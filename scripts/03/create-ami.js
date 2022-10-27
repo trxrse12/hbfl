@@ -9,8 +9,9 @@ function sendCommand (command) {
   return client.send(command)
 }
 
-createImage('i-07e7af3589752b983', 'hamsterImage')
-  .then(() => console.log('Complete'))
+createImage("i-0fb8ba88ba6ee232e", "hamsterImage").then(() =>
+  console.log("Complete")
+);
 
 async function createImage (seedInstanceId, imageName) {
   const params = {

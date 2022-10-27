@@ -9,17 +9,17 @@ const { init: queueInit } = require('./lib/data/lib/sqs.listener')
 
 const options = {
   port: 3000,
-  // // Commented out until Elasticache is configured
-  // cache: [{
-  //   name: 'redis',
-  //   provider: {
-  //     constructor: require('@hapi/catbox-redis'),
-  //     options: {
-  //       partition: 'cache',
-  //       host: 'your elasticache domain here',
-  //     }
-  //   }
-  // }]
+  // Commented out until Elasticache is configured
+  cache: [{
+    name: 'redis',
+    provider: {
+      constructor: require('@hapi/catbox-redis'),
+      options: {
+        partition: 'cache',
+        host: 'hamster.yhevcu.0001.use1.cache.amazonaws.com', // do not include the port in here
+      }
+    }
+  }]
 }
 
 const init = async () => {
@@ -29,7 +29,7 @@ const init = async () => {
 
   // hapi-auth-cookie stuff
   const cache = server.cache({
-    // cache: 'redis',
+    cache: 'redis',
     segment: 'sessions',
     expiresIn: 3 * 24 * 60 * 60 * 1000
   })
